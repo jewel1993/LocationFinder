@@ -1,0 +1,24 @@
+<h1>Welcome User</h1>
+<div>
+  <nav>
+    
+      <form (submit)="onSearch(searchForm)" #searchForm="ngForm" >
+    <input class="form-control mr-sm-4" type="text" ngModel name="search" #searchInput="ngModel" placeholder="Search location" aria-label="Search">
+        
+      &nbsp;
+      
+    <button mdbBtn size="lm" color="warning" outline="true" rounded="true" class="my-0 waves-light"
+       mdbWavesEffect type="submit">Search</button>
+      </form>
+  </nav>
+</div>
+<div class="mat-elevation-z8">
+ 
+
+  <mat-paginator #paginator
+      [length]="dataSource?.data.length"
+      [pageIndex]="0"
+      [pageSize]="50"
+      [pageSizeOptions]="[5, 10, 100, 250]">
+  </mat-paginator>
+</div>
