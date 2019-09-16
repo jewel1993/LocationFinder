@@ -6,6 +6,7 @@ var GoogleMapAPIKey=require('../../config').GoogleMapAPIKey;
 
 
 module.exports.getAddress = function (req, res) {
+	console.log("/address POST call");
 	var query=req.payload.address;
 	addresses=[];
 	request('https://maps.googleapis.com/maps/api/place/textsearch/json?query='+query+'&key='+GoogleMapAPIKey, function (error, response, body) {
@@ -70,5 +71,6 @@ module.exports.getAddress = function (req, res) {
 
 
 module.exports.index = function (req, res) {
+	console.log("/ GET call");
 	return res("This is demo application to search location").code(200);
 }

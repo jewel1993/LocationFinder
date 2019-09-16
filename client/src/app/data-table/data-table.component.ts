@@ -38,12 +38,9 @@ export class DataTableComponent implements AfterViewInit, OnInit {
 
   onSearch(form: NgForm) {
     this.newsearch = form.value.search;
-    console.log(this.newsearch);
     const data = this.newsearch;
     this.http.post(BACKEND_URL + 'getAddress' , { "address" : data }).subscribe((data: any) => {
       this.array = data.addresses;
-      console.log(data);
-      console.log(this.array);
     })
   }
 
