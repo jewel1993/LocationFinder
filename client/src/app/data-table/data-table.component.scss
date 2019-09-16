@@ -2,8 +2,28 @@
   width: 100%;
   margin: 100px;
 }
-table {
-  border: 1px solid;
+table,th,tr {
+  border: 2px solid;
   width: 900px;
   border-collapse: collapse;
+  font-size:large;
+  border-radius: 20px;
+  border: 1px solid royalblue;
+  border-collapse: collapse;
+
+}
+input {
+  font-size: x-large;
+  border-style: solid;
+  
+  text-align: center;
+}
+button {
+  font-size: x-large; border-color: black; border-radius: 20px;
+}
+form {
+  padding-left: 35%
+}
+div {
+  padding-left: 5%
 }

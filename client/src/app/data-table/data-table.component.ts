@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgForm } from "@angular/forms";
 import { Subject } from 'rxjs';
 
+
 import { Address} from './address.model';
 
 const BACKEND_URL = environment.apiUrl;
@@ -38,9 +39,12 @@ export class DataTableComponent implements AfterViewInit, OnInit {
 
   onSearch(form: NgForm) {
     this.newsearch = form.value.search;
+    console.log(this.newsearch);
     const data = this.newsearch;
     this.http.post(BACKEND_URL + 'getAddress' , { "address" : data }).subscribe((data: any) => {
       this.array = data.addresses;
+      console.log(data);
+      console.log(this.array);
     })
   }
 

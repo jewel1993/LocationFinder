@@ -11,8 +11,8 @@
       </form>
   </nav>
 </div>
-<div style="width: 900px;margin-top:20px;">
- <table class="table table-striped">
+<div style="margin-top:20px">
+ <table class="table table-striped" style="width: 1200px;">
   <thead>
    <tr>
      <th>
@@ -31,7 +31,7 @@
       COUNTRY
     </th>
 	<th>
-      LATTITUDE
+      LATITUDE
     </th>
     <th>
       LONGITUDE
@@ -39,27 +39,27 @@
    </tr>
    </thead>
    <!-- data implementing -->
-   <tbody>
+   <tbody >
    <tr *ngFor="let arr of array; let i = index">
-    <th>
+    <th  style="font-weight:normal;">
       {{i+1}}
     </th>
-    <th>
+    <th  style="font-weight:normal;">
     {{arr.street}}
    </th>
-   <th>
+   <th  style="font-weight:normal;">
      {{arr.city}}
    </th>
-   <th>
+   <th  style="font-weight:normal;">
      {{arr.state}}
    </th>
-   <th>
+   <th  style="font-weight:normal;">
      {{arr.country}}
    </th>
-   <th>
+   <th  style="font-weight:normal;">
      {{arr.lat}}
    </th>
-   <th>
+   <th  style="font-weight:normal;">
      {{arr.lon}}
    </th>
    </tr>
@@ -67,4 +67,5 @@
  </table>
  
 </div>
+ <br/> <br/>
 <app-footer ></app-footer>

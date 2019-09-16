@@ -16,7 +16,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import {MatFormFieldModule, MatInputModule,MatIconModule} from '@angular/material'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,24 @@ import { FooterComponent } from './footer/footer.component';
     MatPaginatorModule,
     HttpClientModule,
     MatSortModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
+  ],
+  exports: [
+    
+    MatFormFieldModule,
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    HttpClientModule,
+    MatSortModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
