@@ -11,12 +11,10 @@ const BACKEND_URL = environment.apiUrl;
 })
 export class SearchService {
 
-constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient) { }
 public search(search: string) {
   const data = {search};
-  this.http.post(BACKEND_URL + 'getAddress' , data).subscribe( res => {
-	console.log(res);
-  })  
+  this.http.post(BACKEND_URL + 'getAddress' , data);
 }
 
 }

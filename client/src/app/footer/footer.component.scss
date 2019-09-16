@@ -1,0 +1,23 @@
+.container {
+    height: auto;
+    bottom: 0px;
+    width: 100%;
+    margin: 322px 0px 0px 0px;
+    /* Set the fixed height of the footer here */
+    background-color: #333366 ;
+    display: flex;
+    line-height: 5ch;
+  }
+  
+  ul{
+    float: left;
+    // margin-left: 10%;
+    margin-top: 0%;
+    .row{
+      padding: 5px;
+      .col-4{
+        padding: 5px;
+      }
+  }
+  }
+  

@@ -5,7 +5,14 @@ import { MatTable } from '@angular/material/table';
 import { DataTableDataSource, DataTableItem } from './data-table-datasource';
 import { SearchService } from '../search.service';
 import { ParamMap, ActivatedRoute } from '@angular/router';
+import { environment } from '../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { NgForm } from "@angular/forms";
+import { Subject } from 'rxjs';
+
+import { Address} from './address.model';
+
+const BACKEND_URL = environment.apiUrl;
 
 @Component({
   selector: 'app-data-table',
@@ -18,7 +25,9 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable, {static: false}) table: MatTable<DataTableItem>;
   dataSource: DataTableDataSource;
   public newsearch: string;
-  constructor(public route: ActivatedRoute, public search: SearchService) { }
+  array: any;
+  count = 0;
+  constructor(public route: ActivatedRoute,private http: HttpClient, public search: SearchService) { }
 
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
@@ -30,7 +39,12 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   onSearch(form: NgForm) {
     this.newsearch = form.value.search;
     console.log(this.newsearch);
-    this.search.search(this.newsearch);
+    const data = this.newsearch;
+    this.http.post(BACKEND_URL + 'getAddress' , { "address" : data }).subscribe((data: any) => {
+      this.array = data.addresses;
+      console.log(data);
+      console.log(this.array);
+    })
   }
 
   ngAfterViewInit() {

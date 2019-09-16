@@ -1,24 +1,70 @@
-<h1>Welcome User</h1>
+<h1>Location Finder</h1>
+
 <div>
   <nav>
     
       <form (submit)="onSearch(searchForm)" #searchForm="ngForm" >
     <input class="form-control mr-sm-4" type="text" ngModel name="search" #searchInput="ngModel" placeholder="Search location" aria-label="Search">
-        
-      &nbsp;
-      
+      &nbsp;&nbsp;
     <button mdbBtn size="lm" color="warning" outline="true" rounded="true" class="my-0 waves-light"
        mdbWavesEffect type="submit">Search</button>
       </form>
   </nav>
 </div>
-<div class="mat-elevation-z8">
+<div style="width: 900px;margin-top:20px;">
+ <table class="table table-striped">
+  <thead>
+   <tr>
+     <th>
+       s.no.
+     </th>
+     <th>
+     street
+    </th>
+    <th>
+      city
+    </th>
+    <th>
+      state
+    </th>
+    <th>
+      country
+    </th>
+	<th>
+      lat
+    </th>
+    <th>
+      lon
+    </th>
+   </tr>
+   </thead>
+   <!-- data implementing -->
+   <tbody>
+   <tr *ngFor="let arr of array; let i = index">
+    <th>
+      {{i+1}}
+    </th>
+    <th>
+    {{arr.street}}
+   </th>
+   <th>
+     {{arr.city}}
+   </th>
+   <th>
+     {{arr.state}}
+   </th>
+   <th>
+     {{arr.country}}
+   </th>
+   <th>
+     {{arr.lat}}
+   </th>
+   <th>
+     {{arr.lon}}
+   </th>
+   </tr>
+  </tbody>
+ </table>
  
-
-  <mat-paginator #paginator
-      [length]="dataSource?.data.length"
-      [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[5, 10, 100, 250]">
-  </mat-paginator>
 </div>
+<app-footer ></app-footer>
