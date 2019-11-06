@@ -24,7 +24,7 @@
     "hapi": "^13.5.0",
     "hapi-auth-jwt2": "^7.0.1",
     "hapi-cors": "^1.0.3",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "node-geocoder": "^3.24.0",
     "rxjs": "~6.4.0",
