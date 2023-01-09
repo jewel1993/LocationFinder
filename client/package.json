@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
     "hapi": "^13.5.0",
-    "hapi-auth-jwt2": "^7.0.1",
+    "hapi-auth-jwt2": "^10.4.0",
     "hapi-cors": "^1.0.3",
     "mongoose": "^5.7.1",
     "morgan": "^1.9.1",
